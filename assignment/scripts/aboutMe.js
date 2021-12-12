@@ -22,15 +22,15 @@ let food = "Fire Ramen";
 let pets = 0;
 console.log("I have", pets, "pets");
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 3;
+let friendsPets = 0;
 // 11 - Add two pets to your `pets` variable
-pets += 2;
+pets += 3;
 console.log("I got lonely and now I have", pets, "pets!");
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 const allowedPets = 200;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
-if (adventurous = true) {
+if (adventurous == true) {
   console.log("Adventures are great!");
 }
 else {
@@ -62,7 +62,26 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
+let mostPets;
 
+if (pets > friendsPets || friendsPets == 0) {
+  mostPets = pets;
+  console.log("Muahaha, I have the most pets!");
+} else if (friendsPets > pets || pets == 0) {
+  mostPets = friendsPets;
+  console.log("Nooo, my friends have more pets!");
+} else if (pets == friendsPets){
+  mostPets = pets;
+  console.log('The pets arent so different, yours and mine');
+} else if (pets == 0 && friendsPets == 0){
+  mostPets = 0
+  console.log("Pet-less in Seattle.");
+} else if (pets > friendsPets && friendsPets > pets){
+  mostPets = 'contradiction'
+  console.log("Well this doesn't make any sense!");
+}
+console.log(mostPets);
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+console.log((adventurous == true) ? "Adventures are great!" : "How about we stay home?");
